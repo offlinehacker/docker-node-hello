@@ -1,0 +1,6 @@
+image: nodejs
+name: hello-node-example
+script:
+  - npm install
+services:
+  - redis
