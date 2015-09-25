@@ -4,3 +4,13 @@ script:
   - npm install
 services:
   - redis
+publish:
+    docker:
+        registry_login_url: $REGISTRY_URL
+        registry_login: true
+        keep_build: true
+        username: $REGISTRY_USER
+        password: $REGISTRY_PASS
+        image_name: $REGISTRY_URL/$IMAGE_NAME
+        tags: [$DRONE_BRANCH, $(git rev-parse --short HEAD)]
+        force_tags: true
