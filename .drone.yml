@@ -15,3 +15,5 @@ publish:
         image_name: $REGISTRY_URL/$IMAGE_NAME
         tags: [$DRONE_BRANCH, $(git rev-parse --short HEAD)]
         force_tags: true
+    bash:
+        script: echo "this works"
