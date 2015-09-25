@@ -6,6 +6,7 @@ services:
   - redis
 publish:
     docker:
+        docker_host: $DOCKER_HOST
         registry_login_url: $REGISTRY_URL
         registry_login: true
         keep_build: true
